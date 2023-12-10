@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="../../assets/images/head/logoHead.jpg" type="image/x-icon">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="login.js" defer></script>
+    <script src="../../assets/javascript/script.js" defer></script>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="containerLogin">
+            <div>
+                <ion-icon id="closeModal" name="close-circle-outline"></ion-icon>
+            </div>
+            <p id="modalBemVindo"></p>
+        </div>
+    </div>
+    <main>
+        <section class="sectionForm">
+            <div class="titleLogin">
+                <h1>Faça login em sua conta</h1>
+                <span class="span0"></span>
+            </div>
+            <form action="" method="">
+                <input type="email" name="" id="email" placeholder="Email" autocomplete="off">
+                <span class="span1"></span>
+                <input type="password" name="" id="senha" placeholder="Senha" autocomplete="off">
+                <span class="span2"></span>
+                <p class="semConta">Ou entre sem fazer login clicando <a href="../../index.html">aqui</a></p>
+                <a href="" id="entrar">Entrar</a> 
+            </form>
+        </section>
+        <section class="sectionInfos">
+            <div class="titleInfos">
+                <h2>Novo aqui?</h2>
+            </div>
+            <p>Faça sua conta e aproveite da melhor forma os melhores produtos de nossa loja.</p>
+            <a href="../register/register.html" id="cadastrar">Cadastrar</a>
+        </section>
+    </main>
+</body>
+</html>

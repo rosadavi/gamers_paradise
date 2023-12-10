@@ -1,0 +1,122 @@
+#modalRegistrado {
+    font-size: max(2.3vw, 17px);
+    text-align: center;
+    padding-top: max(3.3vw, 10px);
+}
+
+#closeModal {
+    cursor: pointer;
+    font-size: max(3vw, 30px);
+    position: absolute;
+    right: 0;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+}
+
+.sectionForm {
+    width: 70%;
+    background-color: var(--color2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titleLogin, .titleInfos {
+    text-align: center;
+    color: var(--colorW);
+    font-size: max(2.3vw, 15px);
+    font-family: var(--font2);
+    font-weight: bold;
+}
+
+.sectionForm > form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+    gap: 5px;
+}
+
+#nome, #sobreNome, #email, #senha, #confirmeSenha {
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    padding: 7px 10px;
+    font-size: max(1.3vw, 15px);
+    font-family: var(--font1);
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+    width: 100%;
+}
+
+#nome:focus, #sobreNome:focus, #email:focus, #senha:focus, #confirmeSenha:focus {
+    border-radius: 15px;
+}
+
+form > span {
+    position: relative;
+    width: 40%;
+    color: var(--color1);
+    font-size: max(1.3vw, 17px);
+    font-family: var(--font1);
+    font-weight: bold;
+    text-wrap: nowrap;
+}
+
+#cadastrar {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--colorW);
+    color: var(--colorW);
+    text-decoration: none;
+    font-size: max(1.3vw, 17px);
+    font-family: var(--font2);
+    padding: 5px 15px;
+    border-radius: 25px;
+    transition: all .3s ease-in-out;
+}
+
+#cadastrar:hover {
+    background-color: var(--colorW);
+    color: var(--color2);
+}
+
+.sectionInfos {
+    width: 40%;
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sectionInfos > p {
+    color: var(--colorW);
+    text-align: center;
+    padding: 10px 5px;
+    font-size: max(1.4vw, 17px);
+    font-family: var(--font1);
+    font-weight: bold;
+}
+
+#entrar {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--colorW);
+    color: var(--colorW);
+    text-decoration: none;
+    font-size: max(1.3vw, 16px);
+    font-family: var(--font2);
+    padding: 5px 15px;
+    border-radius: 25px;
+    transition: all .3s ease-in-out;
+}
+
+#entrar:hover {
+    background-color: var(--colorW);
+    color: var(--color1);
+}

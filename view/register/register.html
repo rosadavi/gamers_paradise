@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <link rel="shortcut icon" href="../../assets/images/head/logoHead.jpg" type="image/x-icon">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="register.js" defer></script>
+    <script src="../../assets/javascript/script.js" defer></script>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="containerLogin">
+            <div>
+                <ion-icon id="closeModal" name="close-circle-outline"></ion-icon>
+            </div>
+            <p id="modalRegistrado">Usuário cadastrado com sucesso!</p>
+        </div>
+    </div>
+    <main>
+        <section class="sectionInfos">
+            <div class="titleInfos">
+                <h2>Já tem uma conta?</h2>
+            </div>
+            <p>Entre agora para aproveitar o melhor do nosso site.</p>
+            <a href="../login/login.html" id="entrar">entrar</a>
+        </section>
+        <section class="sectionForm">
+            <div class="titleLogin">
+                <h1>Cadastre-se</h1>
+            </div>
+            <form action="" method="">
+                <input type="text" name="" id="nome" placeholder="Nome" autocomplete="off">
+                <span class="span1"></span>
+                <input type="text" name="" id="sobreNome" placeholder="Sobrenome" autocomplete="off">
+                <span class="span2"></span>
+                <input type="email" name="" id="email" placeholder="Email" autocomplete="off">
+                <span class="span3"></span>
+                <input type="password" name="" id="senha" placeholder="Senha" autocomplete="off">
+                <span class="span4"></span>
+                <input type="password" name="" id="confirmeSenha" placeholder="Confirme sua senha" autocomplete="off">
+                <span class="span5"></span>
+                <a href="" id="cadastrar">Cadastrar</a> 
+            </form>
+        </section>
+    </main>
+</body>
+</html>

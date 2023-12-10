@@ -1,0 +1,896 @@
+@media screen and (max-width: 1310px) {
+    .modal .container {
+        justify-content: space-around;
+    }
+
+}
+
+@media screen and (max-width: 949px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    footer div {
+        margin: 20px 0;
+    }
+
+    .contato {
+        flex-direction: row;
+    }
+
+    .contato h4::after {
+        content: ':';
+    }
+
+    .local {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .contato {
+        flex-direction: column;
+    }   
+
+    .local {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    nav {
+        display: none;
+    }
+
+    .modal .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #navBurger {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 701px) {
+    #navBurger {
+        display: none;
+    }
+    
+    #modalMenu, #fadeMenu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .contato {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .local {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .modal .container {
+        font-size: 5vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .categoria {
+        flex-direction: column;
+    }
+}
+
+#modalSucss {
+    height: 85vh;
+    overflow: auto;
+}
+
+.cep {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.cep > div {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.cep > div input {
+    font-size: max(1.4vw, 17px);
+    padding: 5px;
+    outline: none;
+    border: none;
+    transition: all .4s;
+    font-family: var(--font1);
+}
+
+.cep > div input:focus {
+    border-radius: 5px;
+}
+
+.cep > div button {
+    padding: 5px;
+    font-size: max(2vw, 17px);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .4s;
+    color: var(--color1);
+    border: 2px solid transparent;
+    outline: none;
+    font-family: var(--font2);
+}
+
+.cep > div button:hover {
+    background-color: var(--color2);
+    border-radius: 15px;
+    color: var(--colorq);
+    border: 2px solid var(--colorW);
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color2);
+    font-size: 20px;
+    font-family: var(--font1);
+    font-weight: bold;
+    position: fixed;
+    z-index: 1;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.459);
+}
+
+.logo {
+    width: 140px;
+    height: 140px;
+}
+
+.logo > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#navBurger > ion-icon {
+    color: var(--colorW);
+    font-size: 60px;
+    cursor: pointer;
+}
+
+#modal {
+    overflow: auto;
+    height: 85vh;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 160px;
+}
+
+#modalMenu {
+    background-color: var(--color2);
+}
+
+.sectionModal ul {
+    display: flex;
+    gap: 15px;
+    font-size: 4vw;
+    list-style-type: none;
+    font-family: var(--font1);
+}
+
+.sectionModal a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--colorW)
+}
+
+.sectionModal ion-icon {
+    font-size: 4vw;
+}
+
+.modal .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    font-family: var(--font1);
+    padding: 40px 0;
+    border-bottom: 2px solid var(--colorW);
+}
+
+.menos, .mais {
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.menos:hover, .mais:hover {
+    color: var(--color2);
+}
+
+.modal .container > div {
+    width: 250px;
+    height: 150px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modal .container > div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: all .3s;
+}
+
+.modal .container > div img:hover {
+    transform: scale(1.3);
+}
+
+.modal .container > span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: max(2.7vw, 25px);
+    width: 298px;
+}
+
+.modal .container > span p:nth-child(1) {
+    text-align: center;
+    font-size: max(2vw, 17px);
+}
+
+.modal .container > span div {
+    border: 4px solid var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25%;
+    font-weight: bolder;
+    width: 80%;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    margin-top: -150px;
+}
+
+.total > p {
+    font-family: var(--font1);
+}
+
+.total > button {
+    margin: auto;
+    border: 2px solid var(--colorW);
+    outline: none;
+    font-size: max(1.4vw, 20px);
+    font-family: var(--font2);
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all .3s;
+    background-color: var(--colorW);
+    color: var(--color1);
+}
+
+.total > button:hover {
+    background-color: var(--color2);
+    color: var(--colorW);
+}
+
+.removeItem {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trash {
+    font-size: max(3vw, 50px);
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.trash:hover {
+    color: var(--color2);
+}
+
+nav > ul {
+    display: flex;
+    gap: 20px;
+    transition: all .5s;
+    list-style-type: none;
+}
+
+nav > ul > li > a {
+    color: var(--colorW);
+    text-decoration: none;
+    transition: all .5s;
+}
+
+nav > ul > li > a:hover {
+    color: var(--color1);
+}
+
+#produtos {
+    display: flex;
+    align-items: center;
+}
+
+.precoProduto::before {
+    content: 'R$';
+}
+
+.navIcon {
+    color: var(--colorW);
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.navIcon:hover {
+    color: var(--color1);
+}
+
+.navIcon a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navIcon span > ion-icon, .navIcon a > ion-icon {
+    font-size: 25px;
+}
+
+#carrinho, #carrinhoMenu {
+    position: relative;
+}
+
+#carrinho > span > span, #carrinhoMenu > span > span {
+    position: absolute;
+    top: -16px;
+    left: 8px;
+    font-size: 20px;
+}
+
+li:hover #dropdown {
+    display: block;
+}
+
+#dropdown {
+    position: absolute;
+    list-style-type: none;
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    display: none;
+    box-shadow: -10px 10px 25px rgba(0, 0, 0, 0.505);
+}
+
+#dropdown a {
+    color: var(--colorW);
+    text-decoration: none;
+    display: flex;
+    padding: 5px;
+    transition: all .5s;
+}
+
+#dropdown a:hover {
+    color: var(--color1);
+    background-color: var(--color2);
+}
+
+.section1 {
+    box-shadow: inset 0px 10000000px 0px rgba(0, 0, 0, 0.377);
+    background-image: url('assets/images/section1/bgImage.webp');
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90vh;
+    padding: 100px 20px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    z-index: -10%
+}
+
+.info1 {
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    width: 90vw;
+    height: 40vh;
+    background-color: var(--color1);
+    color: var(--colorW);
+    font-family: var(--font1);
+}
+
+.info1 > p {
+    font-size: max(2vw, 20px);
+    text-align: center;
+    font-weight: bold;
+}
+
+.info1 > h1 {
+    font-size: max(4vw, 30px);
+    font-family: var(--font2);
+}
+
+.info1 > button {
+    background-color: var(--colorW);
+    border-radius: 25px;
+    color: var(--color1);
+    font-size: max(1.4vw, 17px);
+    font-weight: bolder;
+    padding: 5px 15px;
+    outline: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.info1 > button:hover {
+    background-color: transparent;
+    color: var(--colorW);
+    border: 2px solid var(--colorW);
+}
+
+.info2 {
+    position: absolute;
+    right: 100px;
+    top: 30%;
+    border-radius: 10px;
+    animation: go-back 5s infinite alternate;
+}
+
+.info2 img {
+    border-radius: 10px;
+    width: 80%;
+    height: 40%;
+}
+
+@keyframes go-back {
+    from {
+      transform: translateX(100px);
+    }
+    to {
+      transform: translateX(-90vw);
+    }
+}
+
+.section2, .section4, .section6 {
+    background-color: var(--colorB);
+    padding-bottom: 100px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 30px;
+    color: var(--colorW);
+    font-size: 2rem;
+    font-family: var(--font1);
+    text-transform: uppercase;
+}
+
+.title > h1 {
+    font-size: max(2.4vw, 20px);
+}
+
+.title > button {
+    border: none;
+    outline: none;
+    font-size: max(1.3vw, 17px);
+    padding: 5px;
+    font-weight: bolder;
+    border-radius: 25px;
+    color: var(--color1);
+    border: 2px solid transparent;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.title > button:hover {
+    border: 2px solid var(--colorW);
+    background-color: var(--color1);
+    color: var(--colorW);
+}
+
+.arrow-left {
+    top: 30%;
+    left: 2%;
+}
+
+.arrow-right {
+    top: 30%;
+    right: 2%;
+}
+
+.container {
+    position: relative;
+    padding: 0 35px;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+.gallery-wrapper {
+    overflow: hidden;
+}
+
+.gallery-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery {
+    display: flex;
+    gap: 15px;
+}
+
+.gallery span > span:nth-child(1) {
+    overflow: hidden;
+    height: 300px;
+    display: block;
+}
+
+.gallery span > span > img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: all .5s;
+}
+
+.container > ion-icon {
+   color: var(--colorW);
+   cursor: pointer;
+   position: absolute;
+   transition: all .3s;
+   font-size: 4rem;
+}
+
+.container > ion-icon:hover {
+    color: var(--color1);
+}
+
+.gallery span:hover img {
+    transform: scale(1.2);
+}
+
+.famicom {
+    text-wrap: nowrap;
+}
+
+.gallery span > div:nth-child(2) {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--colorW);
+    text-align: center;
+    font-family: var(--font1);
+}
+
+.gallery span > div button {
+    width: 70%;
+    margin: auto;
+    background-color: var(--color1);
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    padding: 10px 0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all .5s;
+    font-weight: bolder;
+}
+
+.gallery span > div button {
+    color: var(--colorW);
+    text-decoration: none;
+}
+
+.gallery span > div button:hover {
+    opacity: 0.6;
+}
+
+.item, .item2, .item3 {
+    opacity: 0.3;
+}
+
+.infoCard p::before {
+    content: 'R$';
+}
+
+.current-item, .current-item2, .current-item3 {
+    opacity: 1;
+}
+
+.section3 {
+    background-color: var(--color2);
+    font-family: var(--font1);
+    font-weight: bolder;
+    color: var(--colorW);
+    width: 100%;
+}
+
+.section3 > h1 {
+    font-size: max(2vw, 20px);
+    padding: 70px 0px 40px 100px;
+    text-transform: uppercase;
+
+}
+
+.categoria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    padding-bottom: 50px;
+}
+
+.categoria a > img{
+    transition: all .4s;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.categoria div > a {
+    display: flex;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.categoria > div:hover img {
+    transform: scale(1.1);
+}
+
+.categoria h2 > a {
+    text-decoration: none;
+    color: var(--colorW);
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-weight: lighter;
+}
+
+.carrouselSection, .carrouselSection0 {
+    background-color: var(--color2);
+    padding: 50px 0;
+    position: relative;
+}
+
+.carrossel-automatico, .carrossel-automatico0 {
+    width: 95vw;
+    height: 500px;
+    max-height: 500px;
+    overflow: hidden;
+    margin: auto;
+    background-color: var(--color2);
+}
+
+.carrossel-automatico img, .carrossel-automatico0 img {
+    width: 95vw;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carrossel-1, .carrossel-10  {
+    display: flex;
+    transform: translateX(0);
+}
+
+.infosCarrousel, .infosCarrousel0 {
+    position: absolute;
+    color: var(--colorW);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font1);
+    text-shadow: 2px 2px 2px black;
+}
+
+.infosCarrousel > h2, .infosCarrousel0 > h2 {
+    text-transform: uppercase;
+    font-size: max(3vw, 18px);
+    text-align: center;
+}
+
+.infosCarrousel > p, .infosCarrousel0 > p {
+    font-weight: bolder;
+    text-align: center;
+    font-size: max(1.7vw, 17px);
+    text-wrap: nowrap;
+}
+
+.infosCarrousel > button, .infosCarrousel0 > button {
+    margin-top: 20px;
+    border: 2px solid transparent;
+    outline: none;
+    background-color: var(--color1);
+    color: var(--colorW);
+    font-size: max(1.3vw, 17px);
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 25px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.infosCarrousel > button:hover, .infosCarrousel0 > button:hover {
+    border: 2px solid var(--color1);
+    background-color: var(--colorW);
+    color: var(--color1);
+}
+
+.sectionNewSletter {
+    height: 70vh;
+    background-image: url('assets/images/newslatter/bgGrade.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    color: var(--colorW);
+}
+
+.sectionNewSletter > h1 {
+    text-transform: uppercase;
+    font-size: max(4.3vw, 40px);
+    font-family: var(--font2);
+}
+
+.sectionNewSletter > p {
+    font-size: max(1.5vw, 20px);
+    font-family: var(--font1);
+    text-align: center;
+    padding: 0 10px;
+}
+
+.sectionNewSletter > form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    max-width: 60%;
+}
+
+.sectionNewSletter > form > label {
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: var(--font1);
+    padding-bottom: 20px;
+}
+
+.sectionNewSletter > form > input {
+    color: var(--colorW);
+    text-align: center;
+    border: 3px solid var(--colorW);
+    outline: none;
+    font-size: 1.2rem;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 10px 8px;
+    background-color: transparent;
+}
+
+.sectionNewSletter > form > button {
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: bolder;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 4px solid transparent;
+    transition: all .3s;
+}
+
+.sectionNewSletter > form > button:hover {
+    border: 4px solid var(--color1);
+    background-color: var(--color1);
+    color: var(--colorW);
+    border: 4px solid transparent;
+}
+
+footer {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--color2);
+    color: var(--colorW);
+    font-size: max(1.1vw, 15px);
+    font-family: var(--font1);
+    font-weight: bold;
+}
+
+footer > div {
+    margin: 20px 0;
+}
+
+footer .logo img {
+    border: 3px solid var(--colorW);
+    width: 180px;
+    padding: 0 20px;
+}
+
+footer h4 {
+    font-size: max(1.3vw, 25px);
+}
+
+.contato {
+    display: flex;
+    gap: 20px;
+}
+
+.contato span a {
+    color: var(--colorW);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: max(1.2vw, 20px);
+    transition: all .4s;
+}
+
+.contato span a:hover {
+    color: var(--color1);
+}
+
+.local {
+    display: flex;
+    gap: 20px;
+    max-width: 300px;
+}
+
+.local a {
+    color: var(--colorW);
+    font-size: max(1.2vw, 20px);
+    text-decoration: none;
+    transition: all .4s;
+}
+
+.local a:hover {
+    color: var(--color1);
+}

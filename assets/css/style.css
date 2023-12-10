@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Permanent+Marker&display=swap');
+
+:root {
+    --color1: #8858ED;
+    --color2: #2B1F41;
+    --color3: #777777;
+    --colorW: #FFFFFF;
+    --colorB: #000000;
+    --colorT: #3C999634;
+    --font1: 'PT Sans Caption', sans-serif;;
+    --font2: 'Permanent Marker', cursive;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#fade, #fadeMenu, #fadeAviso, #fadeQtd, #fadeSucss, #fadeLog, #fadeOk {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.479);
+}
+
+#fade {
+    z-index: 4;
+}
+
+#fadeMenu {
+    z-index: 2;
+}
+
+#fadeAviso {
+    z-index: 6;
+}
+
+#fadeQtd {
+    z-index: 8;
+}
+
+#fadeSucss {
+    z-index: 10;
+}
+
+#fadeLog {
+    z-index: 12;
+}
+
+#fadeOk {
+    z-index: 14;
+}
+
+#modal, #modalMenu, #modalAviso, #modalQtd, #modalSucss, #modalLog, #modalOk {
+    position: fixed;
+    padding: 20px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font2);
+    color: var(--colorW);
+    font-size: 2.3rem;
+    background-color: var(--color1);
+    border-radius: 25px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.473);
+}
+
+#modal {
+    z-index: 5;
+}
+
+#modalMenu {
+    z-index: 3;
+}
+
+#modalAviso {
+    z-index: 7;
+}
+
+#modalQtd {
+    z-index: 9;
+}
+
+#modalSucss {
+    z-index: 11;
+}
+
+#modalLog {
+    z-index: 13;
+}
+
+#modalOk {
+    z-index: 15;
+}
+
+#modalAviso, #modalQtd, #modalSucss, #modalLog, #modalOk {
+    width: 90vw;
+    max-width: 700px;
+}
+
+#modalQtd, #modalSucss, #modalLog, #modalOk {
+    font-size: max(2vw, 20px);
+}
+
+#modalLog a {
+    color: var(--color2);
+    transition: all .4s;
+}
+
+#modalLog a:hover {
+    color: var(--colorW);
+}
+
+#modalAviso ion-icon, .closeModalQtd, .closeModalSucss, .closeModalLog, .closeModalOk {
+    cursor: pointer;
+    transition: all .4s;
+    font-size: max(3vw, 17px);
+}
+
+#modalAviso ion-icon:hover, .closeModalQtd:hover, .closeModalSucss:hover, .closeModalLog:hover, .closeModalOk:hover {
+    color: var(--color2);
+}
+
+#modalAviso > div {
+    font-size: max(3vw, 30px);
+    text-align: center;
+}
+
+#modalAviso a {
+    color: var(--color2);
+    transition: all .4s;
+}
+
+#modalAviso a:hover {
+    color: var(--colorW);
+}
+
+.modal > ion-icon {
+    position: fixed;
+    top: 1;
+    left: 85%;
+    cursor: pointer;
+    font-size: 3rem;
+    transition: ease-in-out .3s;
+}
+
+.modal > ion-icon:hover {
+    color: var(--color2);
+}
+
+#closeModal {
+    transition: all .4s;
+}
+
+#closeModal:hover {
+    color: var(--color2);
+}
+
+.modal > p {
+    padding: 50px;
+    padding-bottom: 80px;
+} 
+
+.modal > button {
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 25px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-family: var(--font1);
+    background-color: transparent;
+    border: 2px solid var(--colorW);
+    font-weight: bolder;
+    color: var(--colorW);
+    cursor: pointer;
+    transition: ease-in-out .4s;
+}
+
+.modal > button:hover {
+    background-color: var(--color2);
+    border: 2px solid var(--color2);
+}
+
+#fade, #modal, #modalMenu, #fadeMenu, #modalAviso, #fadeAviso, #fadeQtd, #modalQtd, #fadeSucss, #modalSucss, #fadeLog, #modalLog, #fadeOk, #modalOk {
+    transition: all .5s;
+}
+
+#fade.hide, #modal.hide, #fadeMenu.hide, #modalMenu.hide, #modalAviso.hide, #fadeAviso.hide, #fadeQtd.hide, #modalQtd.hide, #fadeSucss.hide, #modalSucss.hide, #fadeLog.hide, #modalLog.hide, #fadeOk.hide, #modalOk.hide {
+    opacity: 0;
+    pointer-events: none;
+}

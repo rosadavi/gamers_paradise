@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamers Paradise</title>
+    <link rel="shortcut icon" href="assets/images/head/logoHead.jpg" type="image/x-icon">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./assets/javascript/script.js" defer></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <section class="modal">
+            <ion-icon name="close-circle" class="closeModal"></ion-icon>
+            <div class="titleCarrinho">
+                <h1>Carrinho</h1>
+            </div>
+        </section>
+        <div class="total">
+            <h2>Subtotal</h2>
+            <p id="subTotal">R$0.00</p>
+            <hr style="margin: 30px 0;">
+            <button id="finalizar">Finalizar</button>
+        </div>
+    </div>
+    <div id="fadeQtd" class="hide"></div>
+    <div id="modalQtd" class="hide">
+        <section class="modalQtd">
+            <ion-icon name="close-circle" class="closeModalQtd"></ion-icon>
+            <h3>Seu carrinho ainda está vazio, adicione produtos para finalizar a compra.</h3>
+        </section>
+    </div>
+    <div id="fadeOk" class="hide"></div>
+    <div id="modalOk" class="hide">
+        <section class="modalOk">
+            <ion-icon name="close-circle" class="closeModalOk"></ion-icon>
+            <h3 style="text-align: center;">Agora é só esperar.🛒</h3>
+        </section>
+    </div>
+    <div id="fadeSucss" class="hide"></div>
+    <div id="modalSucss" class="hide">
+        <section class="modalSucss">
+            <ion-icon name="close-circle" class="closeModalSucss"></ion-icon>
+            <form action="" method="" class="cep">
+                <div>
+                    <label for="">CEP</label>
+                    <input type="text" name="" id="txtcep" maxlength="8" autocomplete="off">
+                </div>
+                <div>
+                    <label for="">Rua</label>
+                    <input type="text" name="" id="txtlogradouro">
+                </div>
+                <div>
+                    <label for="">Cidade</label>
+                    <input type="text" name="" id="txtlocalidade">
+                </div>
+                <div>
+                    <label for="">Bairro</label>
+                    <input type="text" name="" id="txtbairro">
+                </div>
+                <div>
+                    <label for="">UF</label>
+                    <input type="text" name="" id="txtuf">
+                </div>
+                <div>
+                    <button id="comprar">Comprar</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <div id="fadeLog" class="hide"></div>
+    <div id="modalLog" class="hide">
+        <section class="modalLog">
+            <ion-icon name="close-circle" class="closeModalLog"></ion-icon>
+            <h3>Faça login para finalizar a compra, clicando <a href="view/login/login.html">aqui</a></h3>
+        </section>
+    </div>
+    <div id="fadeMenu" class="hide"></div>
+        <div id="modalMenu" class="hide">
+            <ion-icon name="close-circle" class="closeModalMenu"></ion-icon>
+            <div class="sectionModal">
+                <ul>
+                    <li>
+                        <a href="#" id="produtos">
+                            <span>Produtos</span>
+                            <ion-icon class="chevron" name="chevron-down-outline"></ion-icon>
+                        </a>
+                        <ul id="dropdown">
+                            <li><a href="#games">Games</a></li>
+                            <li><a href="#consoles">Consoles</a></li>
+                            <li><a href="#acess">Acessórios</a></li>
+                        </ul>
+                    </li>
+                    <li class="navIcon" id="login1">
+                        <a href="view/login/login.html">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                            <span>Login</span>
+                        </a>
+                    </li>
+                    <li class="navIcon" id="logoff1">
+                        <a href="view/login/login.html">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                    <li class="navIcon" id="carrinhoMenu">
+                        <span>
+                            <ion-icon name="cart-outline"></ion-icon>
+                            <span class="qtdCart">0</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="fadeAviso" class="hide"></div>
+        <div id="modalAviso" class="hide">
+            <ion-icon name="close-circle" class="closeModalAviso"></ion-icon>
+            <div>
+                <p>Para finalizar as compras dos produtos faça login, clicando <a href="view/login/login.html">aqui</a>.</p>
+            </div>
+        </div>
+    <header>
+        <div class="logo">
+            <img src="assets/images/head/logo.png" alt="Logo Página">
+        </div>
+        <div id="navBurger">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Produtos
+                        <ion-icon class="chevron" name="chevron-down-outline"></ion-icon>
+                    </a>
+                    <ul id="dropdown">
+                        <li><a href="#games">Games</a></li>
+                        <li><a href="#consoles">Consoles</a></li>
+                        <li><a href="#acess">Acessórios</a></li>
+                    </ul>
+                </li>
+                <li class="navIcon" id="login2">
+                    <a href="view/login/login.html">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        <span>Login</span>
+                    </a>
+                </li>
+                <li class="navIcon" id="logoff2">
+                    <a href="view/login/login.html">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        <span>Logout</span>
+                    </a>
+                </li>
+                <li class="navIcon" id="carrinho">
+                        <span>
+                            <ion-icon name="cart-outline"></ion-icon>
+                            <span class="qtdCart">0</span>
+                        </span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section1">
+            <div class="info1">
+                <p>Mais poder ao seu gaming</p>
+                <h1>Gamers Paradise</h1>
+                <p>Jogos disponívies para PCs e consoles</p>
+            </div>
+            <div class="info2">
+                <img src="assets/images/section1/imgSection1.webp" alt="">
+            </div>
+        </section>
+        <section class="section3">
+            <h1>Veja por categoria</h1>
+            <div class="categoria">
+                <div class="img1">
+                    <div>
+                        <a href="#consoles"><img src="assets/images/categoria/console.webp" alt=""></a>
+                    </div>
+                    <span>
+                        <h2><a href="">Consoles</a></h2>
+                    </span>
+                </div>
+                <div class="img2">
+                    <div>
+                        <a href="#acess"><img src="assets/images/categoria/acessorio.webp" alt=""></a>
+                    </div>
+                    <span>
+                        <h2><a href="">Acessórios</a></h2>
+                    </span>
+                </div>
+                <div class="img3">
+                    <div>
+                        <a href="#games"><img src="assets/images/categoria/controle.webp" alt=""></a>
+                    </div>
+                    <span>
+                        <h2><a href="">Games</a></h2>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section class="section2" id="games">
+            <div class="title">
+                <h1>Games em alta</h1>
+            </div>
+            <div class="container">
+                <div class="gallery-wrapper">
+                    <div class="gallery">
+                        <span>
+                            <span><img src="assets/images/games/readdead.jfif" alt="Red Dead Redemption 2" class="item3 current-item3"></span>
+                            <div class="infoCard">
+                                <h1>Red Dead Redemption 2</h1>
+                                <p>159.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/games/tlou2.png" alt="The Last Of Us 2" class="item3"></span>
+                            <div class="infoCard">
+                                <h1>The Last Of Us 2</h1>
+                                <p>189.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/games/ds3.png" alt="Dark Souls 3" class="item3"></span>
+                            <div class="infoCard">
+                                <h1>Dark Souls 3</h1>
+                                <p>199.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/games/mariokart.webp" alt="Super Mario Odissey" class="item3"></span>
+                            <div class="infoCard">
+                                <h1>Super Mario Odissey</h1>
+                                <p>289.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/games/thewitcher3.avif" alt="The Witcher 3 Wild Hunt" class="item3"></span>
+                            <div class="infoCard">
+                                <h1>The Witcher 3</h1>
+                                <p>59.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/games/gow.png" alt="God of War" class="item3"></span>
+                            <div class="infoCard">
+                                <h1>God of War</h1>
+                                <p>39.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/games/maneater.png" alt="Maneater" class="item3"></span>
+                            <div class="infoCard">
+                                <h1>Maneater</h1>
+                                <p>99.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/games/gowR.jpg" alt="God of War Ragnarok" class="item3"></span>
+                            <div class="infoCard">
+                                <h1>God of War Ragnarok</h1>
+                                <p>179.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/games/gta.png" alt="Super Mario Bros" class="item3"></span>
+                            <div class="infoCard">
+                                <h1>GTAV</h1>
+                                <p>89.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                           <span><img src="assets/images/games/dbd.png" alt="Dead by Daylight" class="item3"></span>
+                            <div class="infoCard">
+                                <h1>Dead by Daylight</h1>
+                                <p>349.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <ion-icon class="arrow-left control3" name="chevron-back-circle"></ion-icon>
+                <ion-icon class="arrow-right control3" name="chevron-forward-circle"></ion-icon>
+            </div>
+        </section>
+        <section class="carrouselSection0">
+            <div class="carrossel-automatico0">
+                <div class="carrossel-10" id="img0">
+                    <div>
+                        <img src="assets/images/banner/banner1.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="assets/images/banner/banner4.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="infosCarrousel0">
+                <h2>os melhores jogos</h2>
+                <p>Atuais e do passado.</p>
+            </div>
+        </section>
+        <section class="section4" id="acess">
+            <div class="title">
+                <h1>Dê um upgrade no seu gear</h1>
+            </div>
+            <div class="container">
+                <div class="gallery-wrapper">
+                    <div class="gallery">
+                        <span>
+                            <span><img src="assets/images/acessorios/mousepad2.png" alt="Mousepad Logitech" class="item2 current-item2"></span>
+                            <div class="infoCard">
+                                <h1>Mousepad Logitech</h1>
+                                <p>144.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/acessorios/fone.webp" alt="Fone BlueFire" class="item2"></span>
+                            <div class="infoCard">
+                                <h1>Fone Bluetooth</h1>
+                                <p>290.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/acessorios/mouse.png" alt="G502" class="item2"></span>
+                            <div class="infoCard">
+                                <h1>G502</h1>
+                                <p>359.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/acessorios/mousepad.webp" alt="Mousepad corasir mm300" class="item2"></span>
+                            <div class="infoCard">
+                                <h1>CORSAIR MM300</h1>
+                                <p>259.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/acessorios/oculos.webp" alt="Óculos anti luz azul" class="item2"></span>
+                            <div class="infoCard">
+                                <h1>Óculos anti luz azul</h1>
+                                <p>169.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/acessorios/mouse2.webp" alt="G403" class="item2"></span>
+                            <div class="infoCard">
+                                <h1 class="famicom">G403</h1>
+                                <p>199.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/acessorios/mouseped2.jpg" alt="Mousepad" class="item2"></span>
+                            <div class="infoCard">
+                                <h1>Mousepad</h1>
+                                <p>79.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                           <span><img src="assets/images/acessorios/fone3.webp" alt="Hyperx" class="item2"></span>
+                            <div class="infoCard">
+                                <h1>Hyperx</h1>
+                                <p>399.90</p>
+                                <button class="adicionar">Adicionar</a></button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/acessorios/mouse3.webp" alt="Mouse PICTECK" class="item2"></span>
+                            <div class="infoCard">
+                                <h1>Mouse PICTECK</h1>
+                                <p>299.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/acessorios/teclado.webp" alt="teclado mechenike" class="item2"></span>
+                            <div class="infoCard">
+                                <h1>Teclado mechenike</h1>
+                                <p>999.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <ion-icon class="arrow-left control2" name="chevron-back-circle"></ion-icon>
+                <ion-icon class="arrow-right control2" name="chevron-forward-circle"></ion-icon>
+            </div>
+        </section>
+        <section class="carrouselSection">
+            <div class="carrossel-automatico">
+                <div class="carrossel-1" id="img">
+                    <div>
+                        <img src="assets/images/banner/banner2.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="assets/images/banner/banner3.webp" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="infosCarrousel">
+                <h2>ganhe e gaste</h2>
+                <p>Economize 20% ao gastar mais de R$625</p>
+            </div>
+        </section>
+        <section class="section6" id="consoles">
+            <div class="title">
+                <h1>consoles</h1>
+            </div>
+            <div class="container">
+                <div class="gallery-wrapper">
+                    <div class="gallery">
+                        <span>
+                            <span><img src="assets/images/consoles/gameboyadvance.png" alt="Game Boy Advance" class="item current-item"></span>
+                            <div class="infoCard">
+                                <h1 class="famicom">Game Boy Advance</h1>
+                                <p>1599.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/consoles/xbox360.webp" alt="Xbox 360" class="item"></span>
+                            <div class="infoCard">
+                                <h1>Xbox 360</h1>
+                                <p>499.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/consoles/playstation3.webp" alt="PlayStation 3" class="item"></span>
+                            <div class="infoCard">
+                                <h1>PlayStation 3</h1>
+                                <p>999.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/consoles/nintendoWIi.png" alt="Nintendo Wii" class="item"></span>
+                            <div class="infoCard">
+                                <h1>Nintendo Wii</h1>
+                                <p>499.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/consoles/playstation.png" alt="PlayStation" class="item"></span>
+                            <div class="infoCard">
+                                <h1>PlayStation</h1>
+                                <p>599.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/consoles/playstation4.webp" alt="PlayStation 4" class="item"></span>
+                            <div class="infoCard">
+                                <h1>PlayStation 4</h1>
+                                <p>3440.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/consoles/gameboy.webp" alt="Game Boy Original" class="item"></span>
+                            <div class="infoCard">
+                                <h1>Game Boy Original</h1>
+                                <p>4699.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/consoles/nintendoSwitch.webp" alt="Nintendo Switch" class="item"></span>
+                            <div class="infoCard">
+                                <h1>Nintendo Switch</h1>
+                                <p>1799.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/consoles/nitendoDS.png" alt="Nintendo DS" class="item"></span>
+                            <div class="infoCard">
+                                <h1>Nintendo DS</h1>
+                                <p>689.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                        <span>
+                            <span><img src="assets/images/consoles/playstation2.webp" alt="Playstatio 2" class="item"></span>
+                            <div class="infoCard">
+                                <h1>Playstatio 2</h1>
+                                <p>159.90</p>
+                                <button class="adicionar">Adicionar</button>
+                                <span class="add"></span>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <ion-icon class="arrow-left control" name="chevron-back-circle"></ion-icon>
+                <ion-icon class="arrow-right control" name="chevron-forward-circle"></ion-icon>
+            </div>
+        </section>
+        <section class="sectionNewSletter">
+            <h1>NewSletter</h1>
+            <p>Assine e receba atualizações sobre novos produtos e ofertas especiais</p>
+            <form action="" method="">
+                <label for="email">Email*</label>
+                <input type="email" name="" id="" required>
+                <button>Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="logo">
+            <img src="assets/images/head/logo.png" alt="Logo do site">
+        </div>
+        <div class="contato">
+            <span>
+                <h4>Contato</h4>
+            </span>
+            <span>
+                <a href="https://wa.me/61996531102" target="_blank">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                    whatsapp
+                </a>
+            </span>
+            <span>
+                <a href="https://instagram.com/rosadavi_" target="_blank">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                    instagram
+                </a>
+            </span>
+            <span>
+                <a href="https://github.com/rosadavi" target="_blank">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                    facebook
+                </a>
+            </span>
+            <span>
+                <a href="https://github.com/rosadavi" target="_blank">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    twitter
+                </a>
+            </span>
+        </div>
+        <div class="local">
+            <span><h4>Loja</h4></span>
+            <span id="local">
+                <a href="https://maps.app.goo.gl/qrZdpvrYet2ZPUes8" target="_blank">Rua Prates, 194 - Bom Retiro São Paulo - SP, 01121-000</a>
+            </span>
+            <span>
+                Seg. a Sex.: 9:00 às 21:00
+            </span>
+            <span>
+                <a href="mailto:davi.rosa.ofc@gmail.com">info@gamers.com</a>
+            </span>
+            <span>
+                <a href="https://wa.me/61996531102" target="_blank">(61) 9 9653-1102</a>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
