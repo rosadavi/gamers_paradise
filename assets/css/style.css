@@ -21,7 +21,7 @@ html {
     box-sizing: border-box;
 }
 
-#fade, #fadeMenu, #fadeAviso, #fadeQtd, #fadeSucss, #fadeLog, #fadeOk {
+#fade, #fadeMenu, #fadeAviso, #fadeQtd, #fadeSucss, #fadeLog, #fadeOk, #fadeCep {
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -56,7 +56,11 @@ html {
     z-index: 14;
 }
 
-#modal, #modalMenu, #modalAviso, #modalQtd, #modalSucss, #modalLog, #modalOk {
+#fadeCep {
+    z-index: 16;
+}
+
+#modal, #modalMenu, #modalAviso, #modalQtd, #modalSucss, #modalLog, #modalOk, #modalCep {
     position: fixed;
     padding: 20px;
     top: 10%;
@@ -98,12 +102,16 @@ html {
     z-index: 15;
 }
 
-#modalAviso, #modalQtd, #modalSucss, #modalLog, #modalOk {
+#modalCep {
+    z-index: 17;
+}
+
+#modalAviso, #modalQtd, #modalSucss, #modalLog, #modalOk, #modalCep {
     width: 90vw;
     max-width: 700px;
 }
 
-#modalQtd, #modalSucss, #modalLog, #modalOk {
+#modalQtd, #modalSucss, #modalLog, #modalOk, #modalCep {
     font-size: max(2vw, 20px);
 }
 
@@ -116,13 +124,13 @@ html {
     color: var(--colorW);
 }
 
-#modalAviso ion-icon, .closeModalQtd, .closeModalSucss, .closeModalLog, .closeModalOk {
+#modalAviso ion-icon, .closeModalQtd, .closeModalSucss, .closeModalLog, .closeModalOk, .closeModalCep {
     cursor: pointer;
     transition: all .4s;
     font-size: max(3vw, 17px);
 }
 
-#modalAviso ion-icon:hover, .closeModalQtd:hover, .closeModalSucss:hover, .closeModalLog:hover, .closeModalOk:hover {
+#modalAviso ion-icon:hover, .closeModalQtd:hover, .closeModalSucss:hover, .closeModalLog:hover, .closeModalOk:hover, .closeModalCep:hover {
     color: var(--color2);
 }
 
@@ -190,11 +198,11 @@ html {
     border: 2px solid var(--color2);
 }
 
-#fade, #modal, #modalMenu, #fadeMenu, #modalAviso, #fadeAviso, #fadeQtd, #modalQtd, #fadeSucss, #modalSucss, #fadeLog, #modalLog, #fadeOk, #modalOk {
+#fade, #modal, #modalMenu, #fadeMenu, #modalAviso, #fadeAviso, #fadeQtd, #modalQtd, #fadeSucss, #modalSucss, #fadeLog, #modalLog, #fadeOk, #modalOk, #modalCep, #fadeCep {
     transition: all .5s;
 }
 
-#fade.hide, #modal.hide, #fadeMenu.hide, #modalMenu.hide, #modalAviso.hide, #fadeAviso.hide, #fadeQtd.hide, #modalQtd.hide, #fadeSucss.hide, #modalSucss.hide, #fadeLog.hide, #modalLog.hide, #fadeOk.hide, #modalOk.hide {
+#fade.hide, #modal.hide, #fadeMenu.hide, #modalMenu.hide, #modalAviso.hide, #fadeAviso.hide, #fadeQtd.hide, #modalQtd.hide, #fadeSucss.hide, #modalSucss.hide, #fadeLog.hide, #modalLog.hide, #fadeOk.hide, #modalOk.hide, #modalCep.hide, #fadeCep.hide {
     opacity: 0;
     pointer-events: none;
 }

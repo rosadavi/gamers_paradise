@@ -84,6 +84,15 @@ function openModalOk() {
     })
 }
 
+function openModalCep() {
+    const closeModalCep = document.querySelector('.closeModalCep')
+    const events = [closeModalCep, fadeCep]
+    toogleModalCep()
+    events.map((e)=>{
+        e.addEventListener('click', toogleModalCep)
+    })
+}
+
 const navBurger = document.querySelector('#navBurger')
 navBurger.addEventListener('click', ()=>{
     openModalMenu()
@@ -371,6 +380,16 @@ finalizar.addEventListener('click', ()=>{
 
 const comprar = document.querySelector('#comprar')
 comprar.addEventListener('click', (e)=>{
-    e.preventDefault()
-    openModalOk()
+    e.preventDefault();
+    if(txtcep.value == 0 || txtlogradouro.value == 0 || txtlocalidade.value == 0 || txtbairro.value == 0 || txtuf.value == 0) {
+        openModalCep()
+    } else {
+        openModalOk()
+    }
 })
+
+const news = document.querySelector('#news');
+news.addEventListener('click', (element)=> {
+    element.preventDefault();
+    alert('Email cadastrado com sucesso!');
+});

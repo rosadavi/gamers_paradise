@@ -12,6 +12,8 @@ const fadeLog = document.querySelector('#fadeLog')
 const modalLog = document.querySelector('#modalLog')
 const fadeOk = document.querySelector('#fadeOk')
 const modalOk = document.querySelector('#modalOk')
+const fadeCep = document.querySelector('#fadeCep')
+const modalCep = document.querySelector('#modalCep')
 
 function toogleModal() {
     fade.classList.toggle('hide')
@@ -46,6 +48,11 @@ function toogleModalLog() {
 function toogleModalOk() {
     fadeOk.classList.toggle('hide')
     modalOk.classList.toggle('hide')
+}
+
+function toogleModalCep() {
+    fadeCep.classList.toggle('hide')
+    modalCep.classList.toggle('hide')
 }
 
 const getEmail = localStorage.getItem('email')

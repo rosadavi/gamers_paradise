@@ -322,6 +322,7 @@ header {
 
 nav > ul {
     display: flex;
+    align-items: center;
     gap: 20px;
     transition: all .5s;
     list-style-type: none;
